@@ -1,0 +1,98 @@
+$primary-color: #55efc4;
+$gray: #252830;
+$purple: #57068C;
+
+// Fonts
+$lora: 'Lora', serif;
+$work-sans: 'Work Sans', sans-serif;
+$nunito-sans: 'Nunito Sans', sans-serif;
+
+/* GLOBAL
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body, a, h2, {
+  transition: all 0.5s ease-out 0s;
+  -webkit-transition: all 0.5s ease-out 0s;
+}
+
+a:hover {
+  cursor: pointer;    
+}
+
+html, body {
+  //animation: colorchange 20s;
+  //-webkit-animation: colorchange 20s;
+  background-color: $primary-color;
+  height:100%;
+}
+
+@keyframes colorchange
+    {
+      0%   {background: red;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
+
+    @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+    {
+      0%   {background: red;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
+
+.divider {
+  border-top: 0.25rem solid $gray;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* NAVIGATION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* INTRODUCTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.intro {
+  background-color: white;
+  padding-top: 20vh;
+  padding-bottom: 1.25rem;
+}
+
+.name {
+  color: $gray;
+  font-family: $lora;
+  line-height: 6rem;
+}
+
+.headline {
+  color: $gray;
+  font-family: $work-sans;
+}
+
+.nyu:hover {
+  color: $purple;
+}
+
+/* PROFILES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.canvas{
+  padding-top: 0.25rem;
+
+  .profile {
+    color: $gray;
+    display: inline-block;
+    font-size: 3.5rem;
+    height: 0;
+
+    &:hover {
+      color: white;
+    }
+
+    i, svg {
+      margin-right: 1.25rem;
+    }
+  }
+}
