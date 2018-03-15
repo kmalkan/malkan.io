@@ -10,8 +10,8 @@ $nunito-sans: 'Nunito Sans', sans-serif;
 /* GLOBAL
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body, a, h2, {
-  transition: all 0.5s ease-out 0s;
-  -webkit-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
 }
 
 a:hover {

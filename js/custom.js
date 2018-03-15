@@ -11,6 +11,8 @@ $(function() {
   var github = '#4078c0';
   var spotify = '#1ED760';
   var xbox = '#0F760F';
+  var keybase = '#FF6F21';
+  var email = '#FF5252';
   var nyu = '#57068C';
   var white = 'white';
 
@@ -32,8 +34,20 @@ $(function() {
     body.css(bg, primary);
   });
 
+  $('.keybase').hover(function() {
+      body.css(bg, keybase);
+    }, function(){
+    body.css(bg, primary);
+  });
+
   $('.xbox').hover(function() {
       body.css(bg, xbox);
+    }, function(){
+    body.css(bg, primary);
+  });
+
+  $('.email').hover(function() {
+      body.css(bg, email);
     }, function(){
     body.css(bg, primary);
   });
