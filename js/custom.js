@@ -1,62 +1,90 @@
 $(function() {
-  var body = $('body');
-  var profile = $('.profile');
+  var computeLines = function() {
+    // remove any previous numbering
+    $(".line-number").remove();
+    var count = 1;
+    // loop through paragraphs
+    $(".editor-p").each(function() {
+        // get the number of lines in the paragraph
+        var pos = $(this).position();
+        var paragraphHeight = $(this).height();
+        var lines = paragraphHeight / refHeight;
+        var lineHeight = paragraphHeight / lines;
+        
+        for (var i = pos.top; i < pos.top + paragraphHeight; i += lineHeight) {
+            var x = i;
+            if ($('.links')[0].offsetHeight < 100) {
+              x = i + 48;
+            }
+            // add the numbering paragraph at absolute position
+            $("<p>", { class: "line-number" }).text(count++).css("top", x).insertBefore($(this));;
+        }
+        $(this).css("margin-left", "1rem");
+    });
+  
+    // display the contents of the editor
+    $(".line-number").css("opacity", 1);
+    $(".editor-p").css("opacity", 1);
+  };
+
+  // compute a reference height
+  var test = $("<p>dummy</p>");
+  $(".editor-p").eq(0).before(test);
+  var refHeight = test.height();
+  test.remove();
+
+  $(window).resize(computeLines);
+
+  var typed = new Typed('.lead', {
+    strings: [
+      "design things.",
+      "build things.",
+      "think outside the box.",
+      "solve puzzles.",
+      "move it, move it."
+    ],
+    typeSpeed: 70,
+    backSpeed: 60,
+    backDelay: 7000,
+    loop: true
+  });
+
+  var body = $('main');
   var bg = 'background-color';
-  var color = 'color';
+  var opacity = 'opacity';
 
   // Colors
-  var primary = '#55efc4';
-  var font = '#252830';
+  var primary = '#33323F';
   var linkedin = '#0077B5';
   var github = '#4078c0';
   var spotify = '#1ED760';
   var xbox = '#0F760F';
-  var keybase = '#FF6F21';
+  var playstation = '#031869';
   var email = '#FF5252';
-  var nyu = '#57068C';
-  var white = 'white';
 
-  $('.linkedin').hover(function() {
-      body.css(bg, linkedin);
-    }, function(){
-    body.css(bg, primary);
-  });
+  var linkedinIcon = $('.linkedin');
+  var githubIcon = $('.github');
+  var spotifyIcon = $('.spotify');
+  var playstationIcon = $('.playstation');
+  var xboxIcon = $('.xbox');
+  var emailIcon = $('.email');
 
-  $('.github').hover(function() {
-      body.css(bg, github);
+  function setHoverListener(selector, color) {
+    selector.hover(function() {
+      body.css(bg, color);
+      selector.css(opacity, 1.0);
     }, function(){
-    body.css(bg, primary);
-  });
+      body.css(bg, primary);
+      selector.css(opacity, .7);
+    });
+  }
 
-  $('.spotify').hover(function() {
-      body.css(bg, spotify);
-    }, function(){
-    body.css(bg, primary);
-  });
+  setHoverListener(linkedinIcon, linkedin);
+  setHoverListener(githubIcon, github);
+  setHoverListener(spotifyIcon, spotify);
+  setHoverListener(playstationIcon, playstation);
+  setHoverListener(xboxIcon, xbox);
+  setHoverListener(emailIcon, email);
 
-  $('.keybase').hover(function() {
-      body.css(bg, keybase);
-    }, function(){
-    body.css(bg, primary);
-  });
-
-  $('.xbox').hover(function() {
-      body.css(bg, xbox);
-    }, function(){
-    body.css(bg, primary);
-  });
-
-  $('.email').hover(function() {
-      body.css(bg, email);
-    }, function(){
-    body.css(bg, primary);
-  });
-
-  $('.nyu').hover(function() {
-      body.css(bg, nyu);
-      profile.css(color, white);
-    }, function(){
-    body.css(bg, primary);
-    profile.css(color, font);
-  });
+  computeLines();
 });
