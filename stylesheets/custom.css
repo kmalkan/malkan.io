@@ -1,15 +1,16 @@
 @charset "UTF-8";
 /* GLOBAL
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-body, a, h2 {
+body, a, h2, main {
   transition: all 0.5s ease 0s;
   -webkit-transition: all 0.5s ease 0s; }
 
 b {
   font-weight: 900; }
 
-a:hover {
-  cursor: pointer; }
+a, a:hover {
+  color: white;
+  background: none; }
 
 html, body {
   background-color: #252830;
@@ -32,17 +33,18 @@ main {
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   text-align: center; }
-  main > .links > .row > div > i {
-    background-color: #00F; }
 
 /* LINKS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .links {
   margin: 0 auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   font-size: 2rem;
-  width: 700px; }
-  @media screen and (max-width: 700px) {
+  width: 500px; }
+  .links .row > div > a {
+    opacity: .7; }
+  @media screen and (max-width: 500px) {
     .links {
       width: 95%; } }
 
@@ -53,20 +55,63 @@ main {
   margin: 0 auto;
   text-align: left;
   margin-top: 1rem;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  background-color: #4D4D4D; }
+  border-radius: 6px;
+  background-color: #555; }
   .window .window-bar {
     background: radial-gradient(7px at 14px 50%, #adadad 0px, #adadad 5px, #adadad 6px, rgba(255, 255, 255, 0) 7px), radial-gradient(7px at 34px 50%, #adadad 0px, #adadad 5px, #adadad 6px, rgba(255, 255, 255, 0) 7px), radial-gradient(7px at 54px 50%, #adadad 0px, #adadad 5px, #adadad 6px, rgba(255, 255, 255, 0) 7px); }
   @media screen and (max-width: 700px) {
     .window {
       width: 85%; } }
+  @media (min-width: 576px) {
+    .window .container {
+      max-width: 700px; } }
+
+.editor-tab-row {
+  background-color: #444; }
+  .editor-tab-row .editor-tab {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    background-color: #333;
+    margin-left: 1.1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    border-bottom: #FF0266;
+    border-width: 0 0 1px 0;
+    border-style: solid; }
+    @media screen and (max-width: 700px) {
+      .editor-tab-row .editor-tab {
+        margin-left: 1.05rem; } }
+    .editor-tab-row .editor-tab p {
+      margin-bottom: 0; }
+    .editor-tab-row .editor-tab .editor-tab-x {
+      float: right;
+      font-size: 0.3rem;
+      padding: 1px 0 0 0; }
 
 .editor {
-  background-color: #252830;
-  padding: 1rem; }
+  background-color: #222;
+  padding: 1rem 1rem 1rem 0.25rem;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-left: #444;
+  border-style: solid;
+  border-width: 0 0 0 2rem; }
+  .editor p {
+    margin-bottom: 0;
+    margin-left: -1.5rem;
+    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    opacity: 0; }
   .editor .lead {
     font-size: 1rem; }
+  .editor .line-number {
+    position: absolute;
+    display: inline;
+    font-size: smaller;
+    color: whitesmoke;
+    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    opacity: 0; }
 
 /* RESUME
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
