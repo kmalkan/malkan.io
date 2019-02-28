@@ -13,7 +13,7 @@ $(function() {
         
         for (var i = pos.top; i < pos.top + paragraphHeight; i += lineHeight) {
             var x = i;
-            if ($('.links')[0].offsetHeight < 100) {
+            if ($(".links")[0].offsetHeight < 100) {
               x = i + 48;
             }
             // add the numbering paragraph at absolute position
@@ -35,13 +35,12 @@ $(function() {
 
   $(window).resize(computeLines);
 
-  var typed = new Typed('.lead', {
+  var typed = new Typed(".lead", {
     strings: [
       "design things.",
       "build things.",
       "think outside the box.",
-      "solve puzzles.",
-      "move it, move it."
+      "solve puzzles."
     ],
     typeSpeed: 70,
     backSpeed: 60,
@@ -49,25 +48,25 @@ $(function() {
     loop: true
   });
 
-  var body = $('main');
-  var bg = 'background-color';
-  var opacity = 'opacity';
+  var body = $("main");
+  var bg = "background-color";
+  var opacity = "opacity";
 
   // Colors
-  var primary = '#33323F';
-  var linkedin = '#0077B5';
-  var github = '#4078c0';
-  var spotify = '#1ED760';
-  var xbox = '#0F760F';
-  var playstation = '#031869';
-  var email = '#FF5252';
+  var primary = "#33323F";
+  var linkedin = "#0077B5";
+  var github = "#4078c0";
+  var spotify = "#1ED760";
+  var xbox = "#0F760F";
+  var playstation = "#031869";
+  var email = "#FF5252";
 
-  var linkedinIcon = $('.linkedin');
-  var githubIcon = $('.github');
-  var spotifyIcon = $('.spotify');
-  var playstationIcon = $('.playstation');
-  var xboxIcon = $('.xbox');
-  var emailIcon = $('.email');
+  var linkedinIcon = $(".linkedin");
+  var githubIcon = $(".github");
+  var spotifyIcon = $(".spotify");
+  var playstationIcon = $(".playstation");
+  var xboxIcon = $(".xbox");
+  var emailIcon = $(".email");
 
   function setHoverListener(selector, color) {
     selector.hover(function() {
@@ -86,5 +85,9 @@ $(function() {
   setHoverListener(xboxIcon, xbox);
   setHoverListener(emailIcon, email);
 
-  computeLines();
+  if ($(window).width() > 768) {
+    computeLines();
+  } else {
+    $(".editor-p").css("margin-left", "1rem").css("opacity", 1);
+  }
 });

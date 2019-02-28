@@ -79,7 +79,6 @@ main {
   width: 700px;
   margin: 0 auto;
   text-align: left;
-  margin-top: 1rem;
   border-radius: 6px;
   // border: 1px 1px 1px 0px solid whitesmoke;
   background-color: #555;
@@ -129,8 +128,6 @@ main {
 .editor {
   background-color: #222;
   padding: 1rem 1rem 1rem 0.25rem;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
   border-left: #444;
   border-style: solid;
   border-width: 0 0 0 2rem;
@@ -153,7 +150,7 @@ main {
     color: whitesmoke;
     transition: all 0.2s ease 0s;
     -webkit-transition: all 0.2s ease 0s;
-    opacity: 0;;
+    opacity: 0;
 }
 }
 

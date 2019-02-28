@@ -54,7 +54,6 @@ main {
   width: 700px;
   margin: 0 auto;
   text-align: left;
-  margin-top: 1rem;
   border-radius: 6px;
   background-color: #555; }
   .window .window-bar {
@@ -91,8 +90,6 @@ main {
 .editor {
   background-color: #222;
   padding: 1rem 1rem 1rem 0.25rem;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
   border-left: #444;
   border-style: solid;
   border-width: 0 0 0 2rem; }
