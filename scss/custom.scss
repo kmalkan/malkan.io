@@ -133,6 +133,7 @@ main {
   border-width: 0 0 0 2rem;
 
   p {
+    color: whitesmoke;
     margin-bottom: 0;
     margin-left: -1.5rem;
     transition: all 0.2s ease 0s;
@@ -146,6 +147,7 @@ main {
   .line-number {
     position: absolute;
     display: inline;
+    font-family: $open-sans;
     font-size: smaller;
     color: whitesmoke;
     transition: all 0.2s ease 0s;

@@ -23,7 +23,7 @@ $(function() {
     });
   
     // display the contents of the editor
-    $(".line-number").css("opacity", 1);
+    $(".line-number").css("opacity", 0.3);
     $(".editor-p").css("opacity", 1);
   };
 
@@ -37,10 +37,10 @@ $(function() {
 
   var typed = new Typed(".lead", {
     strings: [
-      "design things.",
-      "build things.",
-      "think outside the box.",
-      "solve puzzles."
+      "I like to design things.",
+      "I like to build things.",
+      "I like to think outside the box.",
+      "I like to solve puzzles."
     ],
     typeSpeed: 70,
     backSpeed: 60,
@@ -88,6 +88,8 @@ $(function() {
   if ($(window).width() > 768) {
     computeLines();
   } else {
-    $(".editor-p").css("margin-left", "1rem").css("opacity", 1);
+    window.setTimeout(function(){
+    computeLines();   
+    }, 100);
   }
 });
