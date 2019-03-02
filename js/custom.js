@@ -1,5 +1,5 @@
 $(function() {
-  var computeLines = function() {
+  var computeLines = function(isVisible) {
     // remove any previous numbering
     $(".line-number").remove();
     var count = 1;
@@ -23,17 +23,14 @@ $(function() {
     });
   
     // display the contents of the editor
-    $(".line-number").css("opacity", 0.3);
-    $(".editor-p").css("opacity", 1);
+    if (isVisible) {
+      $(".line-number").css("opacity", 0.3);
+      $(".editor-p").css("opacity", 1.0);
+    } else {
+      $(".line-number").css("opacity", 0.01);
+      $(".editor-p").css("opacity", 0.01);
+    }
   };
-
-  // compute a reference height
-  var test = $("<p>dummy</p>");
-  $(".editor-p").eq(0).before(test);
-  var refHeight = test.height();
-  test.remove();
-
-  $(window).resize(computeLines);
 
   var typed = new Typed(".lead", {
     strings: [
@@ -85,11 +82,24 @@ $(function() {
   setHoverListener(xboxIcon, xbox);
   setHoverListener(emailIcon, email);
 
+  // compute a reference height
+  var test = $("<p>dummy</p>");
+  $(".editor-p").eq(0).before(test);
+  var refHeight = test.height();
+  test.remove();
+
+  $(window).resize(function() {
+    computeLines(true);
+  });
+
   if ($(window).width() > 768) {
-    computeLines();
+    computeLines(true);
   } else {
-    window.setTimeout(function(){
-    computeLines();   
+    window.setTimeout(function() {
+      computeLines(false);   
     }, 100);
+    window.setTimeout(function() {
+      computeLines(true);
+    }, 300);
   }
 });
