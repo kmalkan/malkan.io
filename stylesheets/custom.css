@@ -97,8 +97,8 @@ main {
     color: whitesmoke;
     margin-bottom: 0;
     margin-left: -1.5rem;
-    transition: all 0.4s ease 0s;
-    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
     opacity: 0; }
   .editor .lead {
     font-size: 1rem; }
@@ -108,8 +108,8 @@ main {
     font-family: "Open Sans", sans-serif;
     font-size: smaller;
     color: whitesmoke;
-    transition: all 0.4s ease 0s;
-    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
     opacity: 0; }
 
 /* RESUME

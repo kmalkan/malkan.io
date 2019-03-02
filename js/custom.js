@@ -21,9 +21,10 @@ $(function() {
         }
         $(this).css("margin-left", "1rem");
     });
+  
     // display the contents of the editor
-    $(".line-number").css("opacity", 0.01);
-    $(".editor-p").css("opacity", 0.01);
+    $(".line-number").css("opacity", 0.3);
+    $(".editor-p").css("opacity", 1);
   };
 
   // compute a reference height
@@ -86,20 +87,9 @@ $(function() {
 
   if ($(window).width() > 768) {
     computeLines();
-    window.setTimeout(function(){
-      computeLines();
-      $(".line-number").css("opacity", 0.3);
-      $(".editor-p").css("opacity", 1);
-    }, 300);
   } else {
     window.setTimeout(function(){
-      computeLines();   
+    computeLines();   
     }, 100);
-    window.setTimeout(function(){
-      computeLines();  
-      $(".line-number").css("opacity", 0.3);
-      $(".editor-p").css("opacity", 1);
-    }, 300);
   }
-  
 });
