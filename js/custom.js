@@ -92,14 +92,10 @@ $(function() {
     computeLines(true);
   });
 
-  if ($(window).width() > 768) {
+  window.setTimeout(function() {
+    computeLines(false);   
+  }, 100);
+  window.setTimeout(function() {
     computeLines(true);
-  } else {
-    window.setTimeout(function() {
-      computeLines(false);   
-    }, 100);
-    window.setTimeout(function() {
-      computeLines(true);
-    }, 300);
-  }
+  }, 300);
 });
