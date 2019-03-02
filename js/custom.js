@@ -97,5 +97,5 @@ $(function() {
   }, 100);
   window.setTimeout(function() {
     computeLines(true);
-  }, 300);
+  }, 500);
 });
