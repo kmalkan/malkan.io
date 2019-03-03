@@ -22,7 +22,7 @@ html, body {
 
 .masthead {
   background-color: whitesmoke;
-  padding: 2rem; }
+  padding: 3rem; }
   .masthead .masthead-brand {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
@@ -34,12 +34,17 @@ main {
   font-weight: 300;
   text-align: center; }
 
+footer {
+  font-family: "Raleway", sans-serif;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+
 /* LINKS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .links {
   margin: 0 auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   font-size: 2rem;
   width: 500px; }
   .links .row > div > a {
