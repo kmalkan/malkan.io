@@ -56,6 +56,8 @@ footer {
 /* INTRODUCTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .window {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
   width: 700px;
   margin: 0 auto;
   text-align: left;
@@ -73,8 +75,6 @@ footer {
 .editor-tab-row {
   background-color: #444; }
   .editor-tab-row .editor-tab {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
     font-size: 0.7rem;
     background-color: #333;
     margin-left: 1.1rem;
@@ -89,7 +89,7 @@ footer {
       margin-bottom: 0; }
     .editor-tab-row .editor-tab .editor-tab-x {
       float: right;
-      font-size: 0.3rem;
+      font-size: 0.6rem;
       padding: 1px 0 0 0; }
 
 .editor {
@@ -110,7 +110,6 @@ footer {
   .editor .line-number {
     position: absolute;
     display: inline;
-    font-family: "Open Sans", sans-serif;
     font-size: smaller;
     color: whitesmoke;
     transition: all 0.4s ease 0s;

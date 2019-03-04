@@ -6,9 +6,7 @@ $orange: #FD8308;
 $red: #FF0266;
 
 // Fonts
-$lora: 'Lora', serif;
-$work-sans: 'Work Sans', sans-serif;
-$open-sans: 'Open Sans', sans-serif;
+$source: 'Source Sans Pro', sans-serif;
 $raleway: 'Raleway', sans-serif;
 
 
@@ -45,7 +43,7 @@ html, body {
   padding: 3rem;
   .masthead-brand {
     font-family: $raleway;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     color: $gray;
   }
 }
@@ -82,6 +80,8 @@ footer {
 /* INTRODUCTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .window {
+  font-family: $source;
+  font-weight: 100;
   width: 700px;
   margin: 0 auto;
   text-align: left;
@@ -108,8 +108,6 @@ footer {
 .editor-tab-row {
   background-color: #444;
   .editor-tab {
-    font-family: $open-sans;
-    font-weight: 300;
     font-size: 0.7rem;
     background-color: #333;
     margin-left: 1.1rem;
@@ -125,7 +123,7 @@ footer {
     }
     .editor-tab-x {
       float: right;
-      font-size: 0.3rem;
+      font-size: 0.6rem;
       padding: 1px 0 0 0;
     }
   }
@@ -153,7 +151,6 @@ footer {
   .line-number {
     position: absolute;
     display: inline;
-    font-family: $open-sans;
     font-size: smaller;
     color: whitesmoke;
     transition: all 0.4s ease 0s;
